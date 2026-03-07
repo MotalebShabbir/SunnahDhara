@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>সুন্নাহধারা ফাউন্ডেশন — পাঠচক্র</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo-arabic">﷽</div>
+    <div class="logo-text">
+      <h1>সুন্নাহধারা ফাউন্ডেশন</h1>
+      <span>পাঠচক্র — ইলম ও আমলের পথ</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Level Navigation -->
+  <div class="level-nav">
+    <button class="level-btn active" onclick="switchLevel(0)">Pre-Work (Level 0)</button>
+    <button class="level-btn locked" title="শীঘ্রই আসছে">Level 1</button>
+    <button class="level-btn locked" title="শীঘ্রই আসছে">Level 2</button>
+    <button class="level-btn locked" title="শীঘ্রই আসছে">Level 3</button>
+    <button class="level-btn locked" title="শীঘ্রই আসছে">Level 4</button>
+  </div>
+
+  <!-- Level Header -->
+  <div class="level-header">
+    <div class="level-badge">LEVEL 0 — PRE-WORK</div>
+    <h2>ঈমান ও আকিদার ভিত্তি</h2>
+    <p>মূল দর্শন: "পরিবেশ বদলাবে হৃদয়, আর দক্ষতা গড়বে ভবিষ্যৎ।" প্রতিদিন ~৩০ মিনিট।</p>
+    <div class="week-progress">
+      <div class="week-progress-fill" id="progressFill" style="width: 50%"></div>
+    </div>
+    <div class="progress-label" id="progressLabel">সপ্তাহ ১ চলছে • ১৪ দিনের মধ্যে ৭ দিন</div>
+  </div>
+
+  <!-- Week Selector -->
+  <div class="week-selector">
+    <button class="week-btn active" onclick="switchWeek(1, this)">📅 সপ্তাহ ১ — তাওহিদ ও ঈমানে মুজমাল</button>
+    <button class="week-btn" onclick="switchWeek(2, this)">📅 সপ্তাহ ২ — ঈমানে মুফাসসাল ও ৬ রুকন</button>
+  </div>
+
+  <!-- View Toggle -->
+  <div class="view-toggle">
+    <label>দেখার ধরন:</label>
+    <div class="toggle-btns">
+      <button class="toggle-btn active" onclick="setView('day', this)">দিন অনুযায়ী</button>
+      <button class="toggle-btn" onclick="setView('all', this)">সব দিন</button>
+    </div>
+  </div>
+
+  <!-- Day Navigation -->
+  <div class="day-nav" id="dayNav"></div>
+
+  <!-- Content Area -->
+  <div id="contentArea"></div>
+
+  <div class="dua-footer">
+    <div class="dua-arabic">اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي</div>
+    <div class="dua-bangla">হে আল্লাহ, তুমি আমাকে যা শিখিয়েছ তা দিয়ে আমাকে উপকৃত করো।</div>
+  </div>
+</main>
+
+<script src="/script.js"></script>
+</body>
+</html>
