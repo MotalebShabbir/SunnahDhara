@@ -1,15 +1,17 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
+const express = require("express");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+const authRoute = require("./routes/auth.route");
 
 dotenv.config();
 connectDB();
 
 const app = express();
 app.use(express.json());
+app.use("/api/auth", authRoute);
 
-app.get('/', (req, res) => {
-  res.send('OMS Server Running!');
+app.get("/", (req, res) => {
+  res.send("OMS Server Running!");
 });
 
 const PORT = process.env.PORT || 5000;
