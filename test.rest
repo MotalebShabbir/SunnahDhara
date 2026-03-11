@@ -1,10 +1,8 @@
 ### Register a new user
-POST http://localhost:5000/api/auth/register
+POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-  "fullName": "Motaleb Sabbir",
   "mobile": "01723189020",
-  "password": "So@S2bb4r#",
-  "role": "Volunteer"
+  "password": "So@S2bb4r#"
 }
